@@ -320,10 +320,10 @@ body {
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-  background-color: #fff;
   border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 6rem;
-  padding-top: 9rem;
+  padding-left: 9rem;
   font-size: 1.6rem;
   transform: skewX(-12deg); }
   .story__shape {
@@ -360,6 +360,20 @@ body {
   .story:hover .story__img {
     transform: translateX(-4rem) scale(1);
     filter: blur(3px) brightness(80%); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.15;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
 
 .header {
   height: 95vh;
@@ -415,6 +429,7 @@ body {
 
 .section-features {
   padding: 20rem 0;
+  background-color: #fff;
   background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
   background-size: cover;
   transform: skewY(-7deg);
@@ -428,6 +443,5 @@ body {
   margin-top: -10rem; }
 
 .section-stories {
-  padding: 15rem 0;
-  background-color: #f7f7f7;
-  padding: 6rem; }
+  position: relative;
+  padding: 15rem 0; }
