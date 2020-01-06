@@ -16,6 +16,14 @@
     cursor: pointer;
   }
 
+  @include respond(tab-port) {
+    left: 31.5rem;
+  }
+
+  @include respond(phone) {
+    left: 18.5rem;
+  }
+
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
