@@ -622,7 +622,7 @@ body {
     width: 66.666666667%;
     display: table-cell;
     vertical-align: middle;
-    padding: 3rem 5rem; }
+    padding: 3rem 3rem; }
     @media (max-width: 56.25em) {
       .popup__right {
         padding: 3rem;
