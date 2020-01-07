@@ -99,12 +99,29 @@
 
           <div class="col-1-of-2">
             <div class="composition">
+              <!-- Here we have 2 versions of the same picture, one with 300px and one has 1000px. In the srcset we specify the width of the image. Next in the sizes we define the aprox view in viewport width units for different breakpoints, if none of the breakpoints applies we use the default which is 300px. The last scr, is for browsers that do not support srcset or sizes, it will get the one with src attribute. So the browser as its loading the html document it knows its current view port width, and it knows its current pixel density of the screen. Having in mind all the info in the img tag, it then can choose which image to download RESOLUTION SWITCHY DENSITY APPROACH-->
               <img
-                src="img/nat-1-large.jpg"
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
                 alt="Photo 1"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                 class="composition__photo composition__photo--p1"
+                src="img/nat-1-large.jpg"
               />
               <img
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                alt="Photo 1"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                class="composition__photo composition__photo--p2"
+                src="img/nat-2-large.jpg"
+              />
+              <img
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                alt="Photo 1"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                class="composition__photo composition__photo--p3"
+                src="img/nat-3-large.jpg"
+              />
+              <!-- <img
                 src="img/nat-2-large.jpg"
                 alt="Photo 2"
                 class="composition__photo composition__photo--p2"
@@ -113,7 +130,7 @@
                 src="img/nat-3-large.jpg"
                 alt="Photo3"
                 class="composition__photo composition__photo--p3"
-              />
+              /> -->
             </div>
           </div>
         </div>
@@ -431,12 +448,19 @@
         <!-- the picture element let us use multiple sources for one image  -->
         <picture class="footer__logo">
           <!-- the source element let us write a media query, with this we force the browser to use the source source set in case that the max width is less than 600px, if it's not, the browser will use the image source set ART DIRECTION   -->
-          <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x,"          media="(max-width: 37.5em)" >
+          <source
+            srcset="
+              img/logo-green-small-1x.png 1x,
+              img/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 37.5em)"
+          />
           <!-- In the img tag we use DENSITY SWITCHING with the source set attribute, here we let the browser choice which image apply, according to the screen which the webpage is viewed on -->
           <img
             srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
             alt="Full logo"
-          >
+            src="img/logo-green-2x.png"
+          />
         </picture>
       </div>
       <div class="row">
