@@ -428,7 +428,16 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo" />
+        <!-- the picture element let us use multiple sources for one image  -->
+        <picture class="footer__logo">
+          <!-- the source element let us write a media query, with this we force the browser to use the source source set in case that the max width is less than 600px, if it's not, the browser will use the image source set ART DIRECTION   -->
+          <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x,"          media="(max-width: 37.5em)" >
+          <!-- In the img tag we use DENSITY SWITCHING with the source set attribute, here we let the browser choice which image apply, according to the screen which the webpage is viewed on -->
+          <img
+            srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+            alt="Full logo"
+          >
+        </picture>
       </div>
       <div class="row">
         <div class="col-1-of-2">
