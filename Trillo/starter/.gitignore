@@ -25,6 +25,9 @@ dist/
 ehthumbs.db
 Thumbs.db
 desktop.ini
+../../.DS_Store
+../../Nexter/.DS_Store
+../.DS_Store
 
 
 # dotenv
